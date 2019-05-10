@@ -20,11 +20,19 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
+    Picture caterpillar = new Picture("arch.jpg");
+    //caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+  
+  public static void testMirrorVerticalRightToLeft()
+	  {
+	    Picture caterpillar = new Picture("arch.jpg");
+	    //caterpillar.explore();
+	    caterpillar.mirrorVerticalRightToLeft();
+	    caterpillar.explore();
+	  }
   
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
@@ -47,9 +55,81 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
   }
+  
+  public static void testKeepOnlyBlue()
+		{
+			Picture koala = new Picture("koala.jpg");
+			koala.explore();
+			koala.keepOnlyBlue();
+			koala.explore();
+		}
+  
+  public static void testNegate()
+	  {
+		  Picture koa = new Picture("koala.jpg");
+		 // koa.explore();
+		  koa.negate();
+		  koa.explore();
+	  }
+  
+  public static void testGrayscale()
+  {
+	  Picture koa = new Picture("koala.jpg");
+	  koa.grayscale();
+	  koa.explore();
+  }
+  
+  public static void testFixUnderwater()
+  {
+	Picture fish = new Picture ("water.jpg");
+	fish.fixUnderwater();
+	fish.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+	  Picture bike = new Picture ("snowman.jpg");
+	  bike.mirrorHorizontal();
+	  bike.explore();
+  }
+  
+  public static void testMirrorHorizontalBotToTop()
+	  {
+		  Picture robot = new Picture ("robot.jpg");
+		  robot.explore();
+		  robot.mirrorHorizontalBotToTop();
+		  robot.explore();
+		  //help
+	  }
+  
+  public static void testMirrorDiagonal()
+	  {
+		  Picture moon = new Picture ("moon-surface.jpg");
+		  moon.explore();
+		  moon.mirrorDiagonal();
+		  moon.explore();
+	  }
+  
+  public static void testMirrorArms()
+  {
+	  Picture snow = new Picture ("snowman.jpg");
+	  snow.mirrorArms();
+	  snow.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture gull = new Picture ("seagull.jpg");
+	  gull.explore();
+	  gull.mirrorGull();
+	  gull.explore();
+  }
+  
+
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -58,7 +138,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -66,13 +146,16 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+	 //testMirrorHorizontal();
+	  //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
